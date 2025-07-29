@@ -1,32 +1,3 @@
-
-"""
-Personal Information Manager 
-
-#Create a tuple to store a person's basic info: (name, age, city, country)
-#Create a list to store their hobbies
-
-Allow the user to:
-
-Display all information
-Add new hobbies
-Remove hobbies
-Update age (by creating a new tuple)
-
-"""
-
-# Complete this program
-def personal_info_manager():
-    # Create initial person tuple
-    person = ("", 0, "", "")  # name, age, city, country
-    hobbies = []
-    
-    # Your code here
-    pass
-
-if __name__ == "__main__":
-    personal_info_manager()
-
-
 """
 Number List Operations
 
@@ -51,23 +22,39 @@ def number_operations():
     print("Enter 10 numbers:")
     for i in range(10):
         # Your code here
-        pass
+        numbers[i] = int(input("Enter number[" + 1 + "]: "))
     
     # Display original list
     print(f"Original numbers: {numbers}")
     
     # Create filtered lists
-    even_numbers = [] # Your code here 
+    even_numbers = [] # Your code here
     odd_numbers = [] # Your code here
     
     # Calculate average
-    average = []  # Your code here
+    average = sum(numbers) / len(numbers) # Your code here
     
     # Numbers greater than average
     above_average = [] # Your code here
     
+    for i in range(10):
+        if numbers[i] % 2 == 0:
+            even_numbers.append(numbers[i])
+        else:
+            odd_numbers.append(numbers[i])
+
+        if numbers[i] > average:
+            above_average.append(numbers[i])
+
     # Display results
     # Your code here
+    print("Even Numbers: ", even_numbers)
+    print("Odd Numbers: ", odd_numbers)
+    print("Above Average: ", above_average)
+    print("Sum: ", sum(numbers))
+    print("Average: ", average)
+    print("Min: ", min(numbers))
+    print("Max: ", max(numbers)) 
 
 if __name__ == "__main__":
     number_operations()
